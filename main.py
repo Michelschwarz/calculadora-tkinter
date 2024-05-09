@@ -1,6 +1,5 @@
 from tkinter import *
 
-
 class Calc:
 
     def __init__(self):
@@ -9,12 +8,10 @@ class Calc:
         self.window.title('Calculadora')
         self.window.resizable(False, False)
 
-
         # Visor de números
         self.screen_numbers = Entry(self.window, font='Arial 20 bold', bg='#172d36',
                                     fg='white', width=16)
         self.screen_numbers.pack()
-
 
         self.frame = Frame(self.window)
         self.frame.pack()
@@ -108,7 +105,8 @@ class Calc:
 
     def Clean(self):
         self.screen_numbers.delete(0, END)
-
+        
+#Exibindo valor...
     def total(self):
         valor = eval(self.screen_numbers.get())
         self.screen_numbers.delete(0, END)
